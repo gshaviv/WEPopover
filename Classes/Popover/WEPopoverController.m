@@ -397,8 +397,9 @@
         /* On iOS 7, there is no background nor content margin, and the arrow is white */
         bgImageName = nil;
         
-        bgMargin = 0.0;
+//        bgMargin = 0.0;
         contentMargin = 0.0;
+        props.arrowMargin = 6.0;
         
         props.upArrowImageName = @"popoverArrowUp-white.png";
         props.downArrowImageName = @"popoverArrowDown-white.png";
@@ -407,9 +408,9 @@
 
     } else {
         bgImageName = @"popoverBg.png";
-        bgMargin = 0.0;
         contentMargin = 4.0;
-
+        props.arrowMargin = 4.0;
+        
         props.upArrowImageName = @"popoverArrowUp.png";
         props.downArrowImageName = @"popoverArrowDown.png";
         props.leftArrowImageName = @"popoverArrowLeft.png";
@@ -435,7 +436,7 @@
 	props.topContentMargin = contentMargin;
 	props.bottomContentMargin = contentMargin;
 	
-	props.arrowMargin = 4.0;
+
 	
 	return props;
 }
