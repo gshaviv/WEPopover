@@ -135,7 +135,7 @@
                                  CGSizeZero);
     
     if (CGSizeEqualToSize(contentPopoverContentSize, CGSizeZero)) {
-        contentPopoverContentSize = contentViewController.contentSizeForViewInPopover;
+        contentPopoverContentSize = contentViewController.preferredContentSize;
     }
 
     return contentPopoverContentSize;
