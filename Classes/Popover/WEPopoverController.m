@@ -276,7 +276,7 @@
 
 - (void)viewWasTouched:(WETouchableView *)view {
 	if (popoverVisible) {
-		if (!delegate || [delegate popoverControllerShouldDismissPopover:self]) {
+		if (!delegate || ![delegate respondsToSelector:@selector(popoverControllerShouldDismissPopover:)] || [delegate popoverControllerShouldDismissPopover:self]) {
 			[self dismissPopoverAnimated:YES userInitiated:YES];
 		}
 	}
