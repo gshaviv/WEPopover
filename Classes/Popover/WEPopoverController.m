@@ -396,7 +396,8 @@ static BOOL OSVersionIsAtLeast(float version) {
 - (void)updateBackgroundPassthroughViews {
 	backgroundView.passthroughViews = passthroughViews;
 }
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 - (void)determineContentSize {
     if (CGSizeEqualToSize(popoverContentSize, CGSizeZero)) {
         if ([contentViewController respondsToSelector:@selector(preferredContentSize)]) {
@@ -406,7 +407,7 @@ static BOOL OSVersionIsAtLeast(float version) {
         }
 	}
 }
-
+#pragma clang diagnostic pop
 - (void)dismissPopoverAnimated:(BOOL)animated userInitiated:(BOOL)userInitiated {
 	if (self.view) {
         if ([self forwardAppearanceMethods]) {
