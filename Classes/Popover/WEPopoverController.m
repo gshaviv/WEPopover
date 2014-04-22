@@ -397,11 +397,7 @@ static BOOL OSVersionIsAtLeast(float version) {
 
 - (void)determineContentSize {
     if (CGSizeEqualToSize(popoverContentSize, CGSizeZero)) {
-        if ([contentViewController respondsToSelector:@selector(preferredContentSize)]) {
             effectivePopoverContentSize = contentViewController.preferredContentSize;
-        } else {
-            effectivePopoverContentSize = contentViewController.contentSizeForViewInPopover;
-        }
 	} else {
         effectivePopoverContentSize = popoverContentSize;
     }
